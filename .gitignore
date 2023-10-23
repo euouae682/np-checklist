@@ -36,3 +36,6 @@ next-env.d.ts
 
 # python virtual environment
 venv/
+
+# ide files
+.idea/
