@@ -27,3 +27,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* STYLES FOR DEBUGGING */
+*,
+*::before,
+*::after {
+  border: 2px solid red;
+}
