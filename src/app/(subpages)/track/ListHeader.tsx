@@ -1,4 +1,4 @@
-export default function ListHeader() {
+const ListHeader = () => {
     return (
         <div className="bg-white shadow-lg rounded-3xl grid grid-cols-5 grid-rows-2 py-4">
             <h2 className="col-span-3 p-4 pl-10">U.S. National Park Checklist</h2>
@@ -11,3 +11,5 @@ export default function ListHeader() {
         </div>
     )
 }
+
+export default ListHeader;

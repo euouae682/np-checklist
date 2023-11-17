@@ -17,7 +17,6 @@ const config: Config = {
         'pastel-green': '#eAf4e7',
         'button-blue': '#004643',
         'slight-gray': '#c5c5c5',
-        'link-blue': '#6c809a',
         'bright-green': '#59c050',
         'bright-red': '#ce1c1c',
       },

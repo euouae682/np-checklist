@@ -68,8 +68,14 @@ h5 {
 }
 
 p {
-  font-size: 12;
+  font-size: 12px;
   font-weight: 400;
+}
+
+a {
+  font-size: 12px;
+  font-weight: 400;
+  color: #004643;
 }
 
 /* STYLES FOR DEBUGGING */

@@ -1,4 +1,4 @@
-export default function TopNav() {
+const TopNav = () => {
     return (
         <nav className="w-full h-20 relative shadow-dark">
             <ul className="h-full flex flex-row">
@@ -11,3 +11,5 @@ export default function TopNav() {
         </nav>
     )
 }
+
+export default TopNav;
