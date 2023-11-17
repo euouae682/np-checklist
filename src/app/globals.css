@@ -28,9 +28,53 @@ table {
 	border-spacing: 0;
 }
 
+/* REMOVE SCROLLBAR */
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* TEXT STYLES */
+
+h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 12;
+  font-weight: 400;
+}
+
 /* STYLES FOR DEBUGGING */
-*,
+/* *,
 *::before,
 *::after {
   border: 2px solid red;
-}
+} */

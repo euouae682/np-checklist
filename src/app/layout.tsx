@@ -4,7 +4,8 @@ import { Lato } from 'next/font/google'
 import './globals.css'
 
 const lato = Lato({ 
-  weight: '400', 
+  weight: ['300', '400'],
+  style: ['normal', 'italic'],
   subsets: ['latin'] 
 })
 
