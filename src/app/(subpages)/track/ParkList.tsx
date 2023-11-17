@@ -13,7 +13,8 @@ const sections = [
                 'status': 'Completed',
                 'region': 'California/Nevada',
                 'location': 'Humboldt County, NV',
-                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.'
+                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
+                'image': '/blackrock.jpg',
             },
             {
                 'name': 'Great Basin National Park',
@@ -22,7 +23,8 @@ const sections = [
                 'status': 'Completed',
                 'region': 'California/Nevada',
                 'location': 'White Pine County, NV',
-                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.'
+                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
+                'image': '/greatbasin.jpg',
             },
         ],
     },
@@ -38,7 +40,8 @@ const sections = [
                 'status': 'Not Completed',
                 'region': 'Northeast',
                 'location': 'Hancock/Knox County, ME',
-                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.'
+                'comments': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
+                'image': '/acadia.jpg',
             },
         ],
     },
@@ -46,7 +49,7 @@ const sections = [
 
 const ParkList = () => {
     return (
-        <div className="h-[600px] bg-white shadow-lg rounded-3xl"> 
+        <div className="bg-white shadow-lg rounded-3xl"> 
             { sections.map((section) => {
                 return <div key={section.id}><SectionItem data={section} /></div>
             }) }

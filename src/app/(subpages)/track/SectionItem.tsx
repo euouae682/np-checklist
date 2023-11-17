@@ -16,6 +16,7 @@ export interface Park {
     region: string;
     location: string;
     comments: string;
+    image: string;
 }
 
 interface SectionProps {
