@@ -5,8 +5,8 @@ const ListHeader = () => {
             <h2 className="col-span-2 p-4">Completion % (XX/YY)</h2>
             <h5 className="col-span-3 p-4 pl-10">List Description Here</h5>
             <div className="col-span-2 flex p-4 gap-16">
-                <button className="bg-button-blue rounded-full text-white py-2 px-8">Show Stats</button>
-                <button className="bg-button-blue rounded-full text-white py-2 px-8">Add to List</button>
+                <button className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 transition">Show Stats</button>
+                <button className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 transition">Add to List</button>
             </div>
         </div>
     )

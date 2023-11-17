@@ -73,9 +73,17 @@ p {
 }
 
 a {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 700;
+  color: #00938c;
+}
+
+a:hover {
   color: #004643;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 /* STYLES FOR DEBUGGING */

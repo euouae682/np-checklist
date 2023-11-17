@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors: {
         'pastel-green': '#eAf4e7',
-        'button-blue': '#004643',
+        'button-blue': '#006661',
+        'button-blue-hover': '#004643',
         'slight-gray': '#c5c5c5',
         'bright-green': '#59c050',
         'bright-red': '#ce1c1c',
