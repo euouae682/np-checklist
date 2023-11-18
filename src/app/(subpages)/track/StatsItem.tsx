@@ -1,19 +1,22 @@
 import { FC } from 'react';
+import { StatType } from './data';
 
 interface StatsProps {
-    name: string;
+    data: StatType;
     totalParks: number;
-    categories: {
-        category: string;
-        parksInCategory: number;
-    }[];
-    collapsible: boolean;
 }
 
-const SectionItem: FC<StatsProps> = ( props: StatsProps ) => {
-    return (<div className="p-8 pl-10">
-        <h2 className="pb-4">{ props.name }</h2>
+const StatsItem: FC<StatsProps> = ( props: StatsProps ) => {
+    return (<div className="py-4">
+        <h2 className="pb-4">{ props.data.name }</h2>
+        <ul className="pl-8 list-disc">
+            { props.data.categories.map((category) => {
+                return (<li className="leading-6" key={ category.id }>
+                    { `${ category.category }: ${ category.parksInCategory } (${Math.round( (category.parksInCategory / props.totalParks) * 100 )}%)` }
+                    </li>);
+            })}
+        </ul>
     </div>);
 }
 
-export default StatsProps;
+export default StatsItem;

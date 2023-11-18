@@ -1,23 +1,6 @@
 import { FC } from 'react';
-import ParkItem from "./ParkItem";
-
-interface Section {
-    header: string;
-    id: string;
-    color: string;
-    parks: Park[];
-}
-
-export interface Park {
-    name: string;
-    id: string;
-    state: string;
-    status: string;
-    region: string;
-    location: string;
-    comments: string;
-    image: string;
-}
+import ParkItem from './ParkItem';
+import { Section } from './data';
 
 interface SectionProps {
     data: Section;

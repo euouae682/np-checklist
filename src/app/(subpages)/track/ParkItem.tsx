@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Park } from "./SectionItem";
+import { Park } from './data';
 
 interface ParkProps {
     data: Park;
