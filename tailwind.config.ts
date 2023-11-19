@@ -19,6 +19,7 @@ const config: Config = {
         'button-blue-hover': '#004643',
         'slight-gray': '#c5c5c5',
         'bright-green': '#59c050',
+        'bright-yellow': '#ddce47',
         'bright-red': '#ce1c1c',
       },
       boxShadow: {
