@@ -86,6 +86,11 @@ a:hover {
   transition-duration: 150ms;
 }
 
+/* FORM STYLES */
+input {
+  background-color: #ededed;
+}
+
 /* STYLES FOR DEBUGGING */
 /* *,
 *::before,
