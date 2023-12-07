@@ -19,7 +19,7 @@ const Track = () => {
     }
 
     return (
-        <main className="p-10 flex gap-10 bg-pastel-green relative">
+        <main className="p-10 flex gap-10 bg-pastel-green relative z-0">
             <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width transition-slowest ease`}>
                 <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                 <ParkList />

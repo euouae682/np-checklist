@@ -1,6 +1,6 @@
 const TopNav = () => {
     return (
-        <nav className="w-full h-20 relative shadow-dark">
+        <nav className="w-full h-20 relative shadow-dark z-10">
             <ul className="h-full flex flex-row">
                 <li className="flex items-center justify-center w-1/6 cursor-pointer"><h1>Main Header</h1></li>
                 <li className="flex items-center justify-center w-1/12 font-light cursor-pointer hover:bg-slight-gray transition"><h3>Explore</h3></li>
