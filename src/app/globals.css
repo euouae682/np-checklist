@@ -91,6 +91,11 @@ input {
   background-color: #ededed;
 }
 
+label {
+  font-size: 20px;
+  display: block;
+}
+
 /* STYLES FOR DEBUGGING */
 /* *,
 *::before,
