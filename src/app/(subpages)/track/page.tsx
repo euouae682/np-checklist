@@ -19,8 +19,8 @@ const Track = () => {
     }
 
     return (
-        <main className="p-10 grid grid-rows-2 gap-10 bg-pastel-green relative">
-            <div className={`${showStats ? 'w-3/4' : 'w-full'} col-span-4 flex flex-col gap-10 transition-width transition-slowest ease`}>
+        <main className="p-10 flex gap-10 bg-pastel-green relative">
+            <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width transition-slowest ease`}>
                 <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                 <ParkList />
             </div>

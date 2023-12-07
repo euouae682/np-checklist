@@ -7,7 +7,7 @@ interface ListStatsProps {
 
 const ListStats = ({showStats}: ListStatsProps) => {
     return (
-        <div className='bg-white shadow-lg rounded-3xl p-8 pl-10'>
+        <div className={` bg-white shadow-lg rounded-3xl grow w-0 p-8 pl-10`}>
             <h2 className="pb-4">List Statistics</h2>
             <hr className="border-slate-300 border" />
             { types.map((type) => {
