@@ -26,7 +26,8 @@ const config: Config = {
         'dark': '0px 8px 8px rgba(0, 0, 0, 0.20)',
       },
       transitionProperty: {
-        'width': 'width'
+        'width': 'width',
+        'right': 'right',
     },
     },
   },

@@ -19,12 +19,12 @@ const Track = () => {
     }
 
     return (
-        <main className="p-10 flex gap-10 bg-pastel-green relative z-0">
-            <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width transition-slowest ease`}>
+        <main className="p-10 bg-pastel-green relative z-0 overflow-hidden">
+            <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
                 <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                 <ParkList />
             </div>
-            { showStats && <ListStats showStats={showStats} /> }
+            <ListStats showStats={showStats} />
             { showAdd && <AddPark />}
         </main>
     );
