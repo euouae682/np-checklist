@@ -25,6 +25,9 @@ const config: Config = {
       boxShadow: {
         'dark': '0px 8px 8px rgba(0, 0, 0, 0.20)',
       },
+      transitionProperty: {
+        'width': 'width'
+    },
     },
   },
   plugins: [],
