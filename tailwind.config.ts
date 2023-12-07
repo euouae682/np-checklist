@@ -28,7 +28,7 @@ const config: Config = {
       transitionProperty: {
         'width': 'width',
         'right': 'right',
-    },
+      },
     },
   },
   plugins: [],

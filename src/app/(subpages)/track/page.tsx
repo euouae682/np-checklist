@@ -25,7 +25,7 @@ const Track = () => {
                 <ParkList />
             </div>
             <ListStats showStats={showStats} />
-            { showAdd && <AddPark />}
+            <AddPark showAdd={showAdd} />
         </main>
     );
 }

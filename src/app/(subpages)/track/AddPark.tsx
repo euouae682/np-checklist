@@ -1,6 +1,10 @@
-const AddPark = () => {
+interface AddParkProps {
+    showAdd: boolean;
+}
+
+const AddPark = ({showAdd}: AddParkProps) => {
     return (
-        <div className="bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8">
+        <div className={`${showAdd ? 'opacity-100 visible' : 'opacity-0 invisible'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8 transition-opacity`}>
             <h2 className="pb-4">Add to List</h2>
             <hr className="border-slate-300 border" />
             <form>
