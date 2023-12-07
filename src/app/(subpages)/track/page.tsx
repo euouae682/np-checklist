@@ -20,11 +20,13 @@ const Track = () => {
 
     return (
         <main className="p-10 bg-pastel-green relative z-0 overflow-hidden">
-            <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
-                <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
-                <ParkList />
+            <div className={`${showAdd ? 'blur-md' : ''} relative transition-all duration-500`}>
+                <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
+                    <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
+                    <ParkList />
+                </div>
+                <ListStats showStats={showStats} />
             </div>
-            <ListStats showStats={showStats} />
             <AddPark showAdd={showAdd} />
         </main>
     );

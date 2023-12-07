@@ -4,8 +4,10 @@ interface AddParkProps {
 
 const AddPark = ({showAdd}: AddParkProps) => {
     return (
-        <div className={`${showAdd ? 'opacity-100 visible fadeOut' : 'opacity-0 invisible fadeIn'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8`}>
-            <h2 className="pb-4">Add to List</h2>
+        <div className={`${showAdd ? 'opacity-100 visible fadeOut' : 'opacity-0 invisible fadeIn'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8 border`}>
+            <div>
+                <h2 className="pb-4">Add to List</h2>
+            </div>
             <hr className="border-slate-300 border" />
             <form>
                 <label htmlFor="name" className="pt-2" >Park Name</label><br />
