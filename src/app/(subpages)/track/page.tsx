@@ -15,16 +15,18 @@ const Track = () => {
     }
 
     const toggleShowAdd = () => {
+        document.body.style.overflowY = 'hidden';
         setShowAdd(!showAdd);
     }
 
     const handleExitAdd = () => {
+        document.body.style.overflowY = 'scroll';
         setShowAdd(false);
     }
 
     return (
         <main className="p-10 bg-pastel-green relative z-0 overflow-hidden">
-            <div className={`${showAdd ? 'blur-md' : ''} relative transition-all duration-500`}>
+            <div className={`${showAdd ? 'blur-md pointer-events-none' : ''} relative transition-all duration-500`}>
                 <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                     <ParkList />
