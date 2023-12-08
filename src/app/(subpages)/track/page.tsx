@@ -20,7 +20,7 @@ const Track = () => {
     }
 
     const handleExitAdd = () => {
-        document.body.style.overflowY = 'scroll';
+        document.body.style.overflowY = 'visible';
         setShowAdd(false);
     }
 
