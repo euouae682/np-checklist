@@ -1,12 +1,17 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+
 interface AddParkProps {
     showAdd: boolean;
+    handleExit: () => void;
 }
 
-const AddPark = ({showAdd}: AddParkProps) => {
+const AddPark = ({showAdd, handleExit}: AddParkProps) => {
     return (
         <div className={`${showAdd ? 'opacity-100 visible fadeOut' : 'opacity-0 invisible fadeIn'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8 border`}>
-            <div>
+            <div className="flex justify-content align-items">
                 <h2 className="pb-4">Add to List</h2>
+                <FontAwesomeIcon onClick={handleExit} icon={faXmark} size="2x" className="text-bright-red cursor-pointer flex-right ml-auto" />
             </div>
             <hr className="border-slate-300 border" />
             <form>

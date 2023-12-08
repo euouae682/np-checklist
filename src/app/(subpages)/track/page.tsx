@@ -18,6 +18,10 @@ const Track = () => {
         setShowAdd(!showAdd);
     }
 
+    const handleExitAdd = () => {
+        setShowAdd(false);
+    }
+
     return (
         <main className="p-10 bg-pastel-green relative z-0 overflow-hidden">
             <div className={`${showAdd ? 'blur-md' : ''} relative transition-all duration-500`}>
@@ -27,7 +31,7 @@ const Track = () => {
                 </div>
                 <ListStats showStats={showStats} />
             </div>
-            <AddPark showAdd={showAdd} />
+            <AddPark showAdd={showAdd} handleExit={handleExitAdd} />
         </main>
     );
 }
