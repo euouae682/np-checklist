@@ -21,6 +21,7 @@ const config: Config = {
         'bright-green': '#59c050',
         'bright-yellow': '#ddce47',
         'bright-red': '#ce1c1c',
+        'bright-red-hover': '#ae1818',
       },
       boxShadow: {
         'dark': '0px 8px 8px rgba(0, 0, 0, 0.20)',
