@@ -110,6 +110,15 @@ label {
   transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
 }
 
+/* MORE INFO FADE */
+.infoFade {
+  transition: opacity 0.15s ease 0s, visibility 0.15s ease 0.5s;
+}
+
+.infoFadeOut {
+  transition: opacity 0.15s ease 0s, visibility 0.15s ease 0s;
+}
+
 /* STYLES FOR DEBUGGING */
 /* *,
 *::before,

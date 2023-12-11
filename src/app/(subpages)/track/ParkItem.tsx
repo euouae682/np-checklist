@@ -30,18 +30,18 @@ const ParkItem = ({data, color}: ParkProps) => {
             <div className={`${color} h-full w-10 absolute right-0 top-0 rounded-r-lg`}></div>
         </div>
         <div className={`${showMore ? 'h-40 border-t-2' : 'h-0'} transition-all flex`}>
-            <div className={`${showMore ? 'opacity-100' : 'opacity-0'} m-4 transition-opacity`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 transition-opacity`}>
                 <h5 className="pb-1">Status: Completed</h5>
                 <p className="py-1">Region: California/Nevada</p>
                 <p className="py-1">Location: White Pine County, NV (see on <a>Google Maps</a>)</p>
                 <p className="py-1"><a>See park information</a></p>
                 <p className="py-1"><a>See park conditions</a></p>
             </div>
-            <div className={`${showMore ? 'opacity-100' : 'opacity-0'} m-4 w-3/5 transition-opacity`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 w-3/5 transition-opacity`}>
                 <h5 className="pb-1">Comments</h5>
                 <p className="py-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem. </p>
             </div>
-            <div className="my-4 mr-16 flex flex-col ml-auto">
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 mr-16 flex flex-col ml-auto`}>
                 <button onClick={ handleChangeStatus } className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 m-4 transition">Change Status</button>
                 <button onClick={ handleRemovePark } className="bg-bright-red hover:bg-bright-red-hover rounded-full text-white py-2 px-8 m-4 transition">Remove Park</button>
             </div>
