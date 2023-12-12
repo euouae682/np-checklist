@@ -32,14 +32,14 @@ const ParkItem = ({data, color}: ParkProps) => {
         <div className={`${showMore ? 'h-40 border-t-2' : 'h-0'} transition-all flex`}>
             <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 transition-opacity`}>
                 <h5 className="pb-1">Status: Completed</h5>
-                <p className="py-1">Region: California/Nevada</p>
-                <p className="py-1">Location: White Pine County, NV (see on <a>Google Maps</a>)</p>
+                <p className="py-1">Region: { data.region }</p>
+                <p className="py-1">Location: { data.location } (see on <a>Google Maps</a>)</p>
                 <p className="py-1"><a>See park information</a></p>
                 <p className="py-1"><a>See park conditions</a></p>
             </div>
-            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 w-3/5 transition-opacity`}>
-                <h5 className="pb-1">Comments</h5>
-                <p className="py-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem. </p>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 w-2/5 transition-opacity`}>
+                <h5 className="pb-1">Description</h5>
+                <p className="py-1">{ data.description }</p>
             </div>
             <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 mr-16 flex flex-col ml-auto`}>
                 <button onClick={ handleChangeStatus } className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 m-4 transition">Change Status</button>
