@@ -13,7 +13,7 @@ export interface Section {
     header: string;
     id: string;
     color: string;
-    parks: Park[];
+    parks: string[];
 }
 
 export interface Park {
@@ -27,22 +27,17 @@ export interface Park {
     image: string;
 }
 
-export const sections = [
+export const parks = [
     {
-        'header': 'Completed',
-        'id': '1',
-        'color': 'bg-bright-green',
-        'parks': [
-            {
-                'name': 'Bryce Canyon National Park',
-                'id': '8',
-                'state': 'Utah',
-                'status': 'Completed',
-                'region': '',
-                'location': '',
-                'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
-                'image': 'brycecanyonnp.jpg',
-            },
+        'name': 'Bryce Canyon National Park',
+        'id': '8',
+        'state': 'Utah',
+        'status': 'Completed',
+        'region': '',
+        'location': '',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
+        'image': 'brycecanyonnp.jpg',
+    },
             {
                 'name': 'Carlsbad Caverns National Park',
                 'id': '11',
@@ -113,13 +108,6 @@ export const sections = [
                 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
                 'image': 'windcavenp.jpg',
             },
-        ],
-    },
-    {
-        'header': 'Visited',
-        'id': '2',
-        'color': 'bg-bright-yellow',
-        'parks': [
             {
                 'name': 'Arches National Park',
                 'id': '3',
@@ -390,13 +378,6 @@ export const sections = [
                 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
                 'image': 'zionnp.jpg',
             },
-        ],
-    },
-    {
-        'header': 'Not Completed',
-        'id': '3',
-        'color': 'bg-bright-red',
-        'parks': [
             {
                 'name': 'Acadia National Park',
                 'id': '1',
@@ -677,8 +658,6 @@ export const sections = [
                 'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum dolor sit amet consectetur adipiscing elit ut. Dictum varius duis at consectetur lorem.',
                 'image': 'wrangellsteliasnp.jpg',
             },
-        ],
-    },
 ]
 
 export const types: StatType[] = [
@@ -776,5 +755,28 @@ export const types: StatType[] = [
         ],
         'collapsible': true,
     }
+]
+
+
+
+export const sections = [
+    {
+        'header': 'Completed',
+        'id': '1',
+        'color': 'bg-bright-green',
+        'parks': ['8', '11', '27', '45', '48', '52', '53', '59'],
+    },
+    {
+        'header': 'Visited',
+        'id': '2',
+        'color': 'bg-bright-yellow',
+        'parks': ['3', '4', '9', '14', '16', '22', '24', '25', '26', '28', '29', '35', '38', '41', '42', '44', '46', '47', '49', '50', '51', '54', '55', '58', '61', '62', '63'],
+    },
+    {
+        'header': 'Not Completed',
+        'id': '3',
+        'color': 'bg-bright-red',
+        'parks': ['1', '2', '5', '6', '7', '10', '12', '13', '15', '17', '18', '19', '20', '21', '23', '30', '31', '32', '33', '34', '36', '37', '39', '40', '43', '56', '57', '60'],
+    },
 ]
 
