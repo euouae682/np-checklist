@@ -32,14 +32,83 @@ const Track = () => {
                 'image': '',
             }
         ])
+        setSections(sections.map((s) => {
+            if (s.header === 'Not Completed') {
+                return {
+                    ...s,
+                    'parks': [...s.parks, '64']
+                }
+            }
+            else {
+                return s;
+            }
+        }));
+
+        handleExitAdd();
     }
 
     const handleStatusChange = (id: string) => {
         console.log(`changing status of park with id ${id}`);
+        let curStatus = "";
+        let newStatus = "";
+        setParks(parks.map((park) => {
+            if (park.id === id) {
+                curStatus = park.status;
+                if (curStatus === 'Not Completed') {
+                    newStatus = 'Visited';
+                }
+                else if (curStatus === 'Visited') {
+                    newStatus = 'Completed';
+                }
+                else {
+                    newStatus = 'Not Completed';
+                }
+                return {
+                    ...park,
+                    'status': newStatus
+                };
+            }
+            else {
+                return park;
+            }
+        }))
+        setSections(sections.map((s) => {
+            if (s.header === newStatus) {
+                return {
+                    ...s,
+                    'parks': [...s.parks, id]
+                }
+            }
+            else if (s.header === curStatus) {
+                return {
+                    ...s,
+                    'parks': s.parks.filter((p) => { return p !== id })
+                }
+            }
+            else {
+                return s;
+            }
+        }))
+        console.log('replaced park');
     }
 
     const handleRemovePark = (id: string) => {
         console.log(`deleting park with id ${id}`);
+
+        setParks(parks.filter((park) => {
+            return park.id !== id;
+        }))
+        setSections(sections.map((s) => {
+            if (s.parks.includes(id)) {
+                return {
+                    ...s,
+                    'parks': s.parks.filter((p) => { return p !== id })
+                }
+            }
+            else {
+                return s;
+            }
+        }))
     }
 
     const toggleShowStats = () => {
