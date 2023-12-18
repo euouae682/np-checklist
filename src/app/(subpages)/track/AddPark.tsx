@@ -4,17 +4,10 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 interface AddParkProps {
     showAdd: boolean;
     handleExit: () => void;
+    handleSubmit: () => void;
 }
 
-const AddPark = ({showAdd, handleExit}: AddParkProps) => {
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-
-        console.log(`adding park, name=${e.target.name.value}, state=${e.target.state.value}, loc=${e.target.loc.value}`);
-
-        handleExit();
-    }
-
+const AddPark = ({showAdd, handleExit, handleSubmit}: AddParkProps) => {
     return (
         <div className={`${showAdd ? 'opacity-100 visible fadeOut' : 'opacity-0 invisible fadeIn'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8 border`}>
             <div className="flex justify-content align-items">

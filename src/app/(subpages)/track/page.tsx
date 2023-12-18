@@ -14,6 +14,26 @@ const Track = () => {
     const [showStats, setShowStats] = useState(false);
     const [showAdd, setShowAdd] = useState(false);
 
+    const handleAddPark = (e: any) => {
+        e.preventDefault();
+
+        console.log(`adding park, name=${e.target.name.value}, state=${e.target.state.value}, loc=${e.target.loc.value}`);
+
+        setParks([
+            ...parks,
+            {
+                'name': e.target.name.value,
+                'id': '64',
+                'state': e.target.state.value,
+                'status': 'Not Completed',
+                'region': 'Pacific Northwest',
+                'location': e.target.loc.value,
+                'description': '',
+                'image': '',
+            }
+        ])
+    }
+
     const toggleShowStats = () => {
         setShowStats(!showStats);
     }
@@ -37,7 +57,7 @@ const Track = () => {
                 </div>
                 <ListStats showStats={showStats} types={types} totalParks={ parks.length } />
             </div>
-            <AddPark showAdd={showAdd} handleExit={handleExitAdd} />
+            <AddPark showAdd={showAdd} handleExit={handleExitAdd} handleSubmit={handleAddPark} />
         </main>
     );
 }
