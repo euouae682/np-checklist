@@ -26,7 +26,7 @@ const ParkItem = ({data, color}: ParkProps) => {
     style={{backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1), 25%, rgba(0, 0, 0, 0)), url(/parks/${ data.image })`}}>
             <h4 className="leading-8">{ data.name }</h4>
             <h5 className="leading-8">{ data.state }</h5>
-            <a onClick={handleShowMore} className="text-md">Show more</a>
+            <a onClick={handleShowMore} className="text-md">{ showMore ? 'Show less' : 'Show more'}</a>
             <div className={`${color} h-full w-10 absolute right-0 top-0 rounded-r-lg`}></div>
         </div>
         <div className={`${showMore ? 'h-40 border-t-2' : 'h-0'} transition-all flex`}>
