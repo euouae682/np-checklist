@@ -5,11 +5,12 @@ import ListHeader from "./ListHeader";
 import ParkList from "./ParkList";
 import ListStats from "./ListStats";
 import AddPark from "./AddPark";
-import { parkData, sectionData } from "./data";
+import { parkData, sectionData, typeData } from "./data";
 
 const Track = () => {
     const [parks, setParks] = useState(parkData);
     const [sections, setSections] = useState(sectionData);
+    const [types, setTypes] = useState(typeData);
     const [showStats, setShowStats] = useState(false);
     const [showAdd, setShowAdd] = useState(false);
 
@@ -34,7 +35,7 @@ const Track = () => {
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                     <ParkList sections={ sections } parks={ parks } />
                 </div>
-                <ListStats showStats={showStats} />
+                <ListStats showStats={showStats} types={types} />
             </div>
             <AddPark showAdd={showAdd} handleExit={handleExitAdd} />
         </main>

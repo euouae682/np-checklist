@@ -4,7 +4,7 @@ export interface StatType {
     categories: {
         category: string;
         id: number;
-        parksInCategory: number;
+        parksInCategory: string[];
     }[];
     collapsible: boolean;
 }
@@ -660,7 +660,7 @@ export const parkData = [
             },
 ]
 
-export const types: StatType[] = [
+export const typeData: StatType[] = [
     {
         'name': 'Status',
         'id': 1,
@@ -668,17 +668,17 @@ export const types: StatType[] = [
             {
                 'category': 'Completed',
                 'id': 1,
-                'parksInCategory': 2,
+                'parksInCategory': [],
             },
             {
                 'category': 'Partially Complete',
                 'id': 2,
-                'parksInCategory': 0,
+                'parksInCategory': ['53'],
             },
             {
                 'category': 'Not Complete',
                 'id': 3,
-                'parksInCategory': 1,
+                'parksInCategory': ['22', '34', '55'],
             },
         ],
         'collapsible': false,
@@ -690,67 +690,67 @@ export const types: StatType[] = [
             {
                 'category': 'Pacific Northwest',
                 'id': 1,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
-                'category': 'California/Nevada',
+                'category': 'California, Nevada',
                 'id': 2,
-                'parksInCategory': 2,
+                'parksInCategory': [],
             },
             {
-                'category': 'Idaho/Montana/Wyoming',
+                'category': 'Idaho, Montana, Wyoming',
                 'id': 3,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Four Corners',
                 'id': 4, 
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Great Plains',
                 'id': 5,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Great Lakes',
                 'id': 6,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Midwest',
                 'id': 7,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'South',
                 'id': 8,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Southeast',
                 'id': 9,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Northeast',
                 'id': 10,
-                'parksInCategory': 1,
+                'parksInCategory': [],
             },
             {
                 'category': 'Alaska',
                 'id': 11,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Hawaii',
                 'id': 12,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
             {
                 'category': 'Other Territories',
                 'id': 13,
-                'parksInCategory': 0,
+                'parksInCategory': [],
             },
         ],
         'collapsible': true,

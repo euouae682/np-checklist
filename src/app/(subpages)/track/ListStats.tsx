@@ -1,11 +1,12 @@
 import StatsItem from "./StatsItem";
-import { types } from "./data";
+import { StatType } from "./data";
 
 interface ListStatsProps {
     showStats: boolean;
+    types: StatType[];
 }
 
-const ListStats = ({showStats}: ListStatsProps) => {
+const ListStats = ({showStats, types}: ListStatsProps) => {
     return (
         <div className={`${showStats ? 'right-10' : '-right-1/3'} bg-white shadow-lg rounded-3xl p-8 pl-10 w-1/5 absolute top-0 transition-right duration-500 ease`}>
             <h2 className="pb-4">List Statistics</h2>
