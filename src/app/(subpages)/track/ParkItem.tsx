@@ -37,11 +37,11 @@ const ParkItem = ({data, color}: ParkProps) => {
                 <p className="py-1"><a>See park information</a></p>
                 <p className="py-1"><a>See park conditions</a></p>
             </div>
-            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 w-2/5 transition-opacity`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 w-2/5 transition-opacity`}>
                 <h5 className="pb-1">Description</h5>
                 <p className="py-1">{ data.description }</p>
             </div>
-            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 mr-16 flex flex-col ml-auto`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 mr-12 flex flex-col ml-auto`}>
                 <button onClick={ handleChangeStatus } className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 m-4 transition">Change Status</button>
                 <button onClick={ handleRemovePark } className="bg-bright-red hover:bg-bright-red-hover rounded-full text-white py-2 px-8 m-4 transition">Remove Park</button>
             </div>
