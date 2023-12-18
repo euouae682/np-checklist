@@ -34,6 +34,14 @@ const Track = () => {
         ])
     }
 
+    const handleStatusChange = (id: string) => {
+        console.log(`changing status of park with id ${id}`);
+    }
+
+    const handleRemovePark = (id: string) => {
+        console.log(`deleting park with id ${id}`);
+    }
+
     const toggleShowStats = () => {
         setShowStats(!showStats);
     }
@@ -53,7 +61,7 @@ const Track = () => {
             <div className={`${showAdd ? 'blur-md pointer-events-none' : ''} relative transition-all duration-500`}>
                 <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
-                    <ParkList sections={ sections } parks={ parks } />
+                    <ParkList sections={ sections } parks={ parks } handleChangeStatus={ handleStatusChange } handleRemovePark={ handleRemovePark } />
                 </div>
                 <ListStats showStats={showStats} types={types} totalParks={ parks.length } />
             </div>

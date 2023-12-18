@@ -4,7 +4,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 interface AddParkProps {
     showAdd: boolean;
     handleExit: () => void;
-    handleSubmit: () => void;
+    handleSubmit: (e: any) => void;
 }
 
 const AddPark = ({showAdd, handleExit, handleSubmit}: AddParkProps) => {

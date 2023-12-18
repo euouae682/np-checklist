@@ -4,21 +4,15 @@ import { Park } from './data';
 interface ParkProps {
     data: Park;
     color: string;
+    handleChangeStatus: (id: string) => void;
+    handleRemovePark: (id: string) => void;
 }
 
-const ParkItem = ({data, color}: ParkProps) => {
+const ParkItem = ({data, color, handleChangeStatus, handleRemovePark}: ParkProps) => {
     const [showMore, setShowMore] = useState(false);
 
     const handleShowMore = () => {
         setShowMore(!showMore);
-    }
-
-    const handleChangeStatus = () => {
-        console.log("change the status");
-    }
-
-    const handleRemovePark = () => {
-        console.log("remove the park");
     }
 
     return <div className="border-slate-400 rounded-xl border-2 my-4 relative">
@@ -42,8 +36,8 @@ const ParkItem = ({data, color}: ParkProps) => {
                 <p className="py-1">{ data.description }</p>
             </div>
             <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 mr-12 flex flex-col ml-auto`}>
-                <button onClick={ handleChangeStatus } className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 m-4 transition">Change Status</button>
-                <button onClick={ handleRemovePark } className="bg-bright-red hover:bg-bright-red-hover rounded-full text-white py-2 px-8 m-4 transition">Remove Park</button>
+                <button onClick={ () => handleChangeStatus(data.id) } className="bg-button-blue hover:bg-button-blue-hover rounded-full text-white py-2 px-8 m-4 transition">Change Status</button>
+                <button onClick={ () => handleRemovePark(data.id) } className="bg-bright-red hover:bg-bright-red-hover rounded-full text-white py-2 px-8 m-4 transition">Remove Park</button>
             </div>
         </div>
     </div>;
