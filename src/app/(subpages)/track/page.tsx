@@ -5,7 +5,7 @@ import ListHeader from "./ListHeader";
 import ParkList from "./ParkList";
 import ListStats from "./ListStats";
 import AddPark from "./AddPark";
-import { parkData, sectionData, typeData } from "./data";
+import { parkData, Park, sectionData, typeData } from "./data";
 
 const Track = () => {
     const [parks, setParks] = useState(parkData);
@@ -14,29 +14,16 @@ const Track = () => {
     const [showStats, setShowStats] = useState(false);
     const [showAdd, setShowAdd] = useState(false);
 
-    const handleAddPark = (e: any) => {
-        e.preventDefault();
-
-        console.log(`adding park, name=${e.target.name.value}, state=${e.target.state.value}, loc=${e.target.loc.value}`);
-
+    const handleAddPark = (newPark: Park) => {
         setParks([
             ...parks,
-            {
-                'name': e.target.name.value,
-                'id': '64',
-                'state': e.target.state.value,
-                'status': 'Not Completed',
-                'region': 'Pacific Northwest',
-                'location': e.target.loc.value,
-                'description': '',
-                'image': '',
-            }
+            newPark
         ])
         setSections(sections.map((s) => {
             if (s.header === 'Not Completed') {
                 return {
                     ...s,
-                    'parks': [...s.parks, '64']
+                    'parks': [...s.parks, newPark.id]
                 }
             }
             else {

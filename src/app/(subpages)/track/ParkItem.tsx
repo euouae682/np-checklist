@@ -27,7 +27,7 @@ const ParkItem = ({data, color, handleChangeStatus, handleRemovePark}: ParkProps
             <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 transition-opacity`}>
                 <h5 className="pb-1">Status: { data.status }</h5>
                 <p className="py-1">Region: { data.region }</p>
-                <p className="py-1">Location: { data.location } (see on <a>Google Maps</a>)</p>
+                <p className="py-1">See on <a>Google Maps</a></p>
                 <p className="py-1"><a>See park information</a></p>
                 <p className="py-1"><a>See park conditions</a></p>
             </div>

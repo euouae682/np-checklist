@@ -92,7 +92,7 @@ a:hover {
 }
 
 /* FORM STYLES */
-input {
+input, textarea {
   background-color: #ededed;
 }
 
