@@ -11,7 +11,7 @@ const StatsItem = ( { data, totalParks }: StatsProps ) => {
         <ul className="pl-8 list-disc">
             { data.categories.map((category) => {
                 return (<li className="leading-6" key={ category.id }>
-                    { `${ category.category }: ${ category.parksInCategory } (${Math.round( (category.parksInCategory / totalParks) * 100 )}%)` }
+                    { `${ category.category }: ${ category.parksInCategory.length } (${Math.round( (category.parksInCategory.length / totalParks) * 100 )}%)` }
                     </li>);
             })}
         </ul>

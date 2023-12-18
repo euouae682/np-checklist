@@ -35,7 +35,7 @@ const Track = () => {
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                     <ParkList sections={ sections } parks={ parks } />
                 </div>
-                <ListStats showStats={showStats} types={types} />
+                <ListStats showStats={showStats} types={types} totalParks={ parks.length } />
             </div>
             <AddPark showAdd={showAdd} handleExit={handleExitAdd} />
         </main>
