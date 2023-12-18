@@ -5,8 +5,11 @@ import ListHeader from "./ListHeader";
 import ParkList from "./ParkList";
 import ListStats from "./ListStats";
 import AddPark from "./AddPark";
+import { parkData, sectionData } from "./data";
 
 const Track = () => {
+    const [parks, setParks] = useState(parkData);
+    const [sections, setSections] = useState(sectionData);
     const [showStats, setShowStats] = useState(false);
     const [showAdd, setShowAdd] = useState(false);
 
@@ -29,7 +32,7 @@ const Track = () => {
             <div className={`${showAdd ? 'blur-md pointer-events-none' : ''} relative transition-all duration-500`}>
                 <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
-                    <ParkList />
+                    <ParkList sections={ sections } parks={ parks } />
                 </div>
                 <ListStats showStats={showStats} />
             </div>

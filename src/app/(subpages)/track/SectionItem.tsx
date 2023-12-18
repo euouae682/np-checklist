@@ -1,16 +1,17 @@
 import ParkItem from './ParkItem';
-import { parks, Section } from './data';
+import { Section, Park } from './data';
 
 interface SectionProps {
-    data: Section;
+    section: Section;
+    parks: Park[];
 }
 
-const SectionItem = ( {data}: SectionProps ) => {
+const SectionItem = ( { section, parks }: SectionProps ) => {
     return (<div className="p-8 pl-10">
-        <h2 className="pb-4">{ `${data.header} (${ data.parks.length })` }</h2>
+        <h2 className="pb-4">{ `${ section.header} (${  section.parks.length })` }</h2>
         <hr className="border-slate-300 border" />
-        { data.parks.map((park) => {
-            return <ParkItem key={park} data={parks.filter(p => p.id == park)[0]} color={data.color} />
+        { section.parks.map((park) => {
+            return <ParkItem key={park} data={parks.filter(p => p.id == park)[0]} color={section.color} />
         }) }
     </div>);
 }

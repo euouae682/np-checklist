@@ -27,7 +27,7 @@ export interface Park {
     image: string;
 }
 
-export const parks = [
+export const parkData = [
     {
         'name': 'Bryce Canyon National Park',
         'id': '8',
@@ -759,7 +759,7 @@ export const types: StatType[] = [
 
 
 
-export const sections = [
+export const sectionData = [
     {
         'header': 'Completed',
         'id': '1',
