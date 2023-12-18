@@ -113,9 +113,9 @@ const Track = () => {
     }
 
     return (
-        <main className="p-10 bg-pastel-green relative z-0 overflow-hidden">
+        <main className="p-6 bg-pastel-green relative z-0 overflow-hidden">
             <div className={`${showAdd ? 'blur-md pointer-events-none' : ''} relative transition-all duration-500`}>
-                <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-10 transition-width duration-500 ease`}>
+                <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-6 transition-width duration-500 ease`}>
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } />
                     <ParkList sections={ sections } parks={ parks } handleChangeStatus={ handleStatusChange } handleRemovePark={ handleRemovePark } />
                 </div>

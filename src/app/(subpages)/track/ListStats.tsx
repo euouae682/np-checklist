@@ -9,7 +9,7 @@ interface ListStatsProps {
 
 const ListStats = ({showStats, types, totalParks}: ListStatsProps) => {
     return (
-        <div className={`${showStats ? 'right-0' : '-right-1/3'} bg-white shadow-lg rounded-3xl p-6 pt-8 w-1/5 absolute top-0 transition-right duration-500 ease`}>
+        <div className={`${showStats ? 'right-0' : '-right-1/3'} bg-white shadow-lg rounded-3xl p-6 pt-8 w-[23%] absolute top-0 transition-right duration-500 ease`}>
             <h2 className="pb-4">List Statistics</h2>
             <hr className="border-slate-300 border" />
             { types.map((type) => {
