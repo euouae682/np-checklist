@@ -30,6 +30,39 @@ const Track = () => {
                 return s;
             }
         }));
+        setTypes(types.map((t) => {
+            if (t.name === 'Status') {
+                return {
+                    ...t,
+                    'categories': t.categories.map((c) => {
+                        if (c.category === newPark.status) {
+                            return {
+                                ...c,
+                                'parksInCategory': [...c.parksInCategory, newPark.id]
+                            }
+                        }
+                        return c;
+                    })
+                };
+            }
+            else if (t.name === 'Regions') {
+                return {
+                    ...t,
+                    'categories': t.categories.map((c) => {
+                        if (c.category === newPark.region) {
+                            return {
+                                ...c,
+                                'parksInCategory': [...c.parksInCategory, newPark.id]
+                            }
+                        }
+                        return c;
+                    })
+                };
+            }
+            else {
+                return t;
+            }
+        }))
 
         handleExitAdd();
     }
@@ -76,6 +109,34 @@ const Track = () => {
                 return s;
             }
         }))
+        setTypes(types.map((t) => {
+            if (t.name === 'Status') {
+                return {
+                    ...t,
+                    'categories': t.categories.map((c) => {
+                        if (c.category === curStatus) {
+                            return {
+                                ...c,
+                                'parksInCategory': c.parksInCategory.filter((s) => {
+                                    return s !== id;
+                                })
+                            }
+                        }
+                        else if (c.category === newStatus) {
+                            return {
+                                ...c,
+                                'parksInCategory': [...c.parksInCategory, id]
+                            }
+                        }
+                        return c;
+                    })
+                };
+            }
+            else {
+                return t;
+            }
+        }))
+
         console.log('replaced park');
     }
 
@@ -94,6 +155,24 @@ const Track = () => {
             }
             else {
                 return s;
+            }
+        }))
+        setTypes(types.map((t) => {
+            return {
+                ...t,
+                'categories': t.categories.map((c) => {
+                    if (c.parksInCategory.includes(id)) {
+                        return {
+                            ...c,
+                            'parksInCategory': c.parksInCategory.filter((s) => {
+                                return s !== id;
+                            })
+                        }
+                    }
+                    else {
+                        return c;
+                    }
+                })
             }
         }))
     }
