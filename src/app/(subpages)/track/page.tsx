@@ -193,7 +193,7 @@ const Track = () => {
 
     return (
         <main className="p-6 bg-pastel-green relative z-0 overflow-hidden">
-            <div className={`${showAdd ? 'blur-md pointer-events-none' : ''} relative transition-all duration-500`}>
+            <div className={`${showAdd ? 'blur-md pointer-events-none select-none' : ''} relative transition-all duration-500`}>
                 <div className={`${showStats ? 'w-3/4' : 'w-full'} flex flex-col gap-6 transition-width duration-500 ease`}>
                     <ListHeader handleStatsClick={ toggleShowStats } handleAddClick={ toggleShowAdd } parks={parks} completed={sections[0].parks} />
                     <ParkList sections={ sections } parks={ parks } handleChangeStatus={ handleStatusChange } handleRemovePark={ handleRemovePark } />
