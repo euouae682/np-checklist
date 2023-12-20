@@ -15,10 +15,81 @@ const AddPark = ({showAdd, handleExit, handleSubmit}: AddParkProps) => {
         'id': '64',
         'state': '',
         'status': 'Not Completed',
-        'region': 'Pacific Northwest',
+        'region': '',
         'description': '',
         'image': '',
     });
+
+    const getNewRegion = (state: string) => {
+        if (['Washington', 'Oregon'].includes(state)) {
+            return 'Pacific Northwest';
+        }
+        else if (['California', 'Nevada'].includes(state)) {
+            return 'California, Nevada';
+        }
+        else if (['Idaho', 'Montana', 'Wyoming'].includes(state)) {
+            return 'Yellowstone';
+        }
+        else if (['Utah', 'Arizona', 'Colorado', 'New Mexico'].includes(state)) {
+            return 'Four Corners';
+        }
+        else if (['North Dakota', 'South Dakota', 'Nebraska', 'Kansas'].includes(state)) {
+            return 'Great Plains';
+        }
+        else if (['Minnesota', 'Wisconsin', 'Michigan'].includes(state)) {
+            return 'Great Lakes';
+        }
+        else if (['Iowa', 'Missouri', 'Illinois', 'Indiana', 'Ohio'].includes(state)) {
+            return 'Midwest';
+        }
+        else if (['Texas', 'Oklahoma', 'Arkansas', 'Louisiana'].includes(state)) {
+            return 'South';
+        }
+        else if (['Mississippi', 'Alabama', 'Georgia', 'Florida', 'South Carolina'].includes(state)) {
+            return 'Southeast';
+        }
+        else if (['North Carolina', 'Tennessee', 'Kentucky', 'Virginia', 'West Virginia'].includes(state)) {
+            return 'Appalachians';
+        }
+        else if (['Maryland', 'Pennsylvania', 'New Jersey', 'New York', 'Connecticut', 'Rhode Island', 'Massachusetts', 'Vermont', 'New Hampshire', 'Maine'].includes(state)) {
+            return 'Northeast';
+        }
+        else if (state === 'Alaska' || state === 'Hawaii') {
+            return state;
+        }
+        else {
+            return 'Other';
+        }
+    }
+
+    const handleSubmitPark = (e: any) => {
+        e.preventDefault();
+
+        if (newPark.name === '') {
+            alert("Name of park cannot be empty!");
+        }
+        else if (newPark.state === '') {
+            alert("State cannot be empty!");
+        }
+        else {
+            const newRegion = getNewRegion(newPark.state);
+            setNewPark({
+                ...newPark,
+                'region': newRegion
+            });
+
+            handleSubmit(newPark);
+            setNewPark({
+                'name': '',
+                'id': '64',
+                'state': '',
+                'status': 'Not Completed',
+                'region': '',
+                'description': '',
+                'image': '',
+            })
+        }
+    }
 
     return (
         <div className={`${showAdd ? 'opacity-100 visible fadeOut' : 'opacity-0 invisible fadeIn'}  bg-white shadow-lg rounded-3xl fixed w-1/4 left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] p-8 border`}>
@@ -27,19 +98,7 @@ const AddPark = ({showAdd, handleExit, handleSubmit}: AddParkProps) => {
                 <FontAwesomeIcon onClick={handleExit} icon={faXmark} size="2x" className="text-bright-red cursor-pointer flex-right ml-auto" />
             </div>
             <hr className="border-slate-300 border" />
-            <form onSubmit={(e: any) => {
-                e.preventDefault();
-                handleSubmit(newPark);
-                setNewPark({
-                    'name': '',
-                    'id': '64',
-                    'state': '',
-                    'status': 'Not Completed',
-                    'region': 'Pacific Northwest',
-                    'description': '',
-                    'image': '',
-                })
-            }}>
+            <form onSubmit={handleSubmitPark}>
                 <label htmlFor="name" className="pt-2" >Park Name</label><br />
                 <input type="text" id="name" name="name" className="shadow-inner rounded-md h-8 w-full py-4" onChange={
                     (e: any) => {

@@ -24,14 +24,14 @@ const ParkItem = ({data, color, handleChangeStatus, handleRemovePark}: ParkProps
             <div className={`${color} h-full w-10 absolute right-0 top-0 rounded-r-lg`}></div>
         </div>
         <div className={`${showMore ? 'h-40 border-t-2' : 'h-0'} transition-all flex`}>
-            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 transition-opacity`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} m-4 w-1/4 transition-opacity`}>
                 <h5 className="pb-1">Status: { data.status }</h5>
                 <p className="py-1">Region: { data.region }</p>
                 <p className="py-1">See on <a>Google Maps</a></p>
                 <p className="py-1"><a>See park information</a></p>
                 <p className="py-1"><a>See park conditions</a></p>
             </div>
-            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 w-2/5 transition-opacity`}>
+            <div className={`${showMore ? 'opacity-100 visibile infoFadeOut' : 'opacity-0 invisible infoFade'} my-4 w-1/3 transition-opacity`}>
                 <h5 className="pb-1">Description</h5>
                 <p className="py-1">{ data.description }</p>
             </div>
