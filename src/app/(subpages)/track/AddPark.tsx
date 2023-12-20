@@ -73,12 +73,14 @@ const AddPark = ({showAdd, handleExit, handleSubmit}: AddParkProps) => {
         }
         else {
             const newRegion = getNewRegion(newPark.state);
-            setNewPark({
+
+            console.log(newRegion);
+
+            handleSubmit({
                 ...newPark,
                 'region': newRegion
             });
 
-            handleSubmit(newPark);
             setNewPark({
                 'name': '',
                 'id': '64',
